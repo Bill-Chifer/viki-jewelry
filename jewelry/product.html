@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Золотое кольцо с бриллиантом — VIKI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (Такая же, как на главной, но с брендом VIKI) -->
+    <header class="header">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">VIKI</a></div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="#">Коллекции</a>
+            <a href="#">Украшения</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </header>
+
+    <!-- Главный блок карточки товара -->
+    <main class="product-page-container">
+        
+        <!-- Левая сторона: Галерея изображений -->
+        <div class="product-gallery">
+            <div class="main-image" style="background-image: url('https://unsplash.com');"></div>
+            <div class="thumbnail-row">
+                <div class="thumb active" style="background-image: url('https://unsplash.com');"></div>
+                <div class="thumb" style="background-image: url('https://unsplash.com');"></div>
+            </div>
+        </div>
+
+        <!-- Правая сторона: Информация и покупка -->
+        <div class="product-details">
+            <span class="product-category">Эксклюзивные кольца</span>
+            <h1 class="product-title">Золотое кольцо с бриллиантом «Классика»</h1>
+            <p class="product-page-price">1 250 ₾</p>
+
+            <!-- Селектор размеров -->
+            <div class="size-selector">
+                <label>Выберите размер:</label>
+                <div class="size-options">
+                    <button class="size-btn">16.0</button>
+                    <button class="size-btn active">16.5</button>
+                    <button class="size-btn">17.0</button>
+                    <button class="size-btn">17.5</button>
+                </div>
+            </div>
+
+            <!-- Кнопка действия -->
+            <button class="buy-now-btn">Добавить в корзину</button>
+
+            <!-- Описание товара -->
+            <div class="product-description-block">
+                <h3>Описание</h3>
+                <p>Изящное кольцо из желтого золота 585 пробы, украшенное чистейшим бриллиантом классической огранки. Это изделие от ювелирного дома VIKI идеально подчеркнет вашу индивидуальность или станет незабываемым подарком для близкого человека.</p>
+            </div>
+
+            <!-- Дополнительная информация (Аккордеон) -->
+            <div class="info-accordion">
+                <div class="accordion-item">
+                    <h4>Характеристики изделия</h4>
+                    <p>Металл: Золото 585 пробы<br>Вставка: 1 Бриллиант, 0.15 карат<br>Вес изделия: ~2.45 г</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
