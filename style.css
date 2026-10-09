@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #1a1a1a;
+}
+
+/* Шапка */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.nav a {
+    margin-left: 35px;
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: #bfa15f;
+}
+
+/* Главный экран */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://unsplash.com') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: #ffffff;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: #bfa15f;
+    color: #ffffff;
+}
+/* Блок категорий */
+.categories {
+    padding: 80px 60px;
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
+    gap: 30px; /* Расстояние между карточками */
+}
+
+.category-card {
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end; /* Контент прижат к низу */
+    padding: 40px;
+    transition: transform 0.5s ease;
+}
+
+/* Эффект легкого затемнения, чтобы текст легко читался */
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.category-card h3 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.category-link {
+    color: #bfa15f; /* Фирменный золотой оттенок */
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+/* Интерактивный премиум-эффект при наведении на карточку */
+.category-card:hover {
+    transform: scale(1.02); /* Карточка плавно увеличивается */
+}
+
+.category-link:hover {
+    color: #ffffff;
+}
+
+/* Адаптивность: на смартфонах карточки встанут друг под друга */
+@media (max-width: 768px) {
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    .categories {
+        padding: 40px 20px;
+    }
+}
+/* Блок товаров */
+.products {
+    padding: 60px 60px 100px 60px;
+    background-color: #f9f9f9;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки в ряд */
+    gap: 25px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Легкая тень при наведении */
+}
+
+.product-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-color: #f5f5f5;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    height: 40px; /* Фиксируем высоту, чтобы кнопки были в один ряд */
+    overflow: hidden;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #bfa15f;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    margin-top: auto; /* Прижимает кнопку к низу карточки */
+}
+
+.add-to-cart:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+}
+
+/* Адаптивность для витрины */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr; /* 1 колонка на экранах телефонов */
+    }
+    .products {
+        padding: 40px 20px;
+    }
+}
+/* Подвал сайта */
+.footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 70px 60px 20px 60px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Левый блок шире остальных */
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 50px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #bfa15f; /* Золотой акцент для логотипа */
+}
+
+.footer-brand p {
+    color: #999999;
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+.footer-links h4, 
+.footer-contacts h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.footer-links ul, 
+.footer-contacts ul {
+    list-style: none;
+}
+
+.footer-links ul li, 
+.footer-contacts ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: #999999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #bfa15f; /* Золотой при наведении */
+}
+
+.footer-contacts ul li {
+    color: #999999;
+    line-height: 1.4;
+}
+
+/* Копирайт */
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    color: #555555;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Адаптивность для мобильных телефонов */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Все блоки выстроятся в один столбец */
+        gap: 35px;
+        padding-bottom: 30px;
+    }
+    .footer {
+        padding: 50px 20px 20px 20px;
+    }
+    .footer-links h4, 
+    .footer-contacts h4 {
+        margin-bottom: 15px;
+    }
+}
+/* Страница товара */
+.product-page-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 60px;
+}
+
+/* Левая колонка - Галерея */
+.product-gallery {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-image {
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-color: #f5f5f5;
+    border: 1px solid #eaeaea;
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 15px;
+}
+
+.thumb {
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #eaeaea;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.thumb.active, .thumb:hover {
+    border-color: #bfa15f;
+}
+
+/* Правая колонка - Детали */
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.product-page-price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #bfa15f;
+    margin-bottom: 30px;
+}
+
+/* Выбор размера */
+.size-selector {
+    margin-bottom: 30px;
+}
+
+.size-selector label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #444444;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.size-options {
+    display: flex;
+    gap: 10px;
+}
+
+.size-btn {
+    padding: 10px 20px;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.size-btn.active, .size-btn:hover {
+    border-color: #1a1a1a;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Кнопка купить */
+.buy-now-btn {
+    width: 100%;
+    padding: 18px;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 40px;
+}
+
+.buy-now-btn:hover {
+    background: #bfa15f;
+}
+
+/* Описание и характеристики */
+.product-description-block h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.product-description-block p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.info-accordion {
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+}
+
+.accordion-item h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.accordion-item p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666666;
+}
+
+/* Адаптивность под экраны смартфонов */
+@media (max-width: 768px) {
+    .product-page-container {
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 20px auto;
+    }
+    .main-image {
+        height: 350px;
+    }
+}
