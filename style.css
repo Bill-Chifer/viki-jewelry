@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -521,5 +524,107 @@ body {
     }
     .main-image {
         height: 350px;
+    }
+}
+/* Страница Контактов */
+.contacts-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 60px;
+}
+
+.contacts-content {
+    display: flex;
+    gap: 80px;
+}
+
+.contacts-info {
+    flex: 1;
+}
+
+.info-block {
+    margin-bottom: 40px;
+}
+
+.info-block h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.info-block p {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.8;
+}
+
+.contacts-form-container {
+    flex: 1.2;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    padding: 40px;
+}
+
+.contacts-form-container h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts-form input,
+.contacts-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #eaeaea;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contacts-form input:focus,
+.contacts-form textarea:focus {
+    border-color: #1a1a1a;
+}
+
+.submit-btn {
+    padding: 16px;
+    background: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #bfa15f;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .contacts-content {
+        flex-direction: column;
+        gap: 40px;
     }
 }

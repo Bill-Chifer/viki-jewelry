@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подвеска с изумрудом — VIKI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">VIKI</a></div>
+        <nav class="nav"><a href="index.html">Главная</a><a href="index.html#catalog">Коллекции</a><a href="contacts.html">Контакты</a></nav>
+    </header>
+    <main class="product-page-container">
+        <div class="product-gallery">
+            <div class="main-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWJ2Iabhj7Qt9d8PjAura5oRFNRaUO-ncYhwkPdoBJMw&s=10');"></div>
+        </div>
+        <div class="product-details">
+            <span class="product-category">Подвески и кулоны</span>
+            <h1 class="product-title">Подвеска с натуральным изумрудом</h1>
+            <p class="product-page-price">1 500 ₾</p>
+                        <!-- Селектор размеров -->
+            <div class="size-selector">
+                <label>Длина цепочки (см):</label>
+                <div class="size-options">
+                    <button class="size-btn">40 см</button>
+                    <button class="size-btn active">45 см</button>
+                    <button class="size-btn">50 см</button>
+                </div>
+            </div>
+
+            <button class="buy-now-btn">Добавить в корзину</button>
+            <div class="product-description-block">
+                <h3>Описание</h3>
+                <p>Роскошная подвеска, центром которой является глубокий зеленый изумруд изумительной огранки, обрамленный тонкими золотыми линиями.</p>
+            </div>
+            <div class="info-accordion">
+                <div class="accordion-item">
+                    <h4>Характеристики изделия</h4>
+                    <p>Металл: Желтое золото 750 пробы<br>Вставка: Натуральный изумруд 0.4 карат<br>Вес изделия: ~1.95 г</p>
+                </div>
+            </div>
+        </div>
+    </main>
+        <script>
+        const sizeButtons = document.querySelectorAll('.size-btn');
+        let selectedSize = '45 см';
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                sizeButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                selectedSize = button.textContent;
+            });
+        });
+
+        document.querySelector('.buy-now-btn').addEventListener('click', () => {
+            alert(`Подвеска с изумрудом VIKI (длина цепочки: ${selectedSize}) успешно добавлена в корзину!`);
+        });
+    </script>
+
+</body>
+</html>

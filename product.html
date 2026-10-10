@@ -24,7 +24,7 @@
         
         <!-- Левая сторона: Галерея изображений -->
         <div class="product-gallery">
-            <div class="main-image" style="background-image: url('https://unsplash.com');"></div>
+            <div class="main-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC2KSPmd-WDIPRG1IIv1cS6AlBlYu2FFm9QJ-CXx0gvQ&s=10');"></div>
             <div class="thumbnail-row">
                 <div class="thumb active" style="background-image: url('https://unsplash.com');"></div>
                 <div class="thumb" style="background-image: url('https://unsplash.com');"></div>
@@ -67,6 +67,33 @@
         </div>
 
     </main>
+    <!-- Скрипт для интерактивности карточки -->
+    <script>
+        // 1. Логика переключения размеров
+        const sizeButtons = document.querySelectorAll('.size-btn');
+        let selectedSize = '16.5'; // Размер по умолчанию, который уже активен в HTML
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Убираем класс active у всех кнопок размеров
+                sizeButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Добавляем класс active той кнопке, на которую кликнули
+                button.classList.add('active');
+                
+                // Запоминаем выбранный размер
+                selectedSize = button.textContent;
+            });
+        });
+
+        // 2. Логика кнопки «Добавить в корзину»
+        const buyButton = document.querySelector('.buy-now-btn');
+
+        buyButton.addEventListener('click', () => {
+            // Всплывающее премиальное уведомление
+            alert(`Кольцо бренда VIKI (размер ${selectedSize}) успешно добавлено в корзину!`);
+        });
+    </script>
 
 </body>
 </html>

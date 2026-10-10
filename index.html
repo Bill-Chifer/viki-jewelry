@@ -10,107 +10,98 @@
 
     <!-- Шапка сайта -->
     <header class="header">
-        <div class="logo">VIKI</div>
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">VIKI</a></div>
         <nav class="nav">
-            <a href="#">Коллекции</a>
-            <a href="#">Украшения</a>
-            <a href="#">О бренде</a>
-            <a href="#">Контакты</a>
+            <a href="#catalog">Коллекции</a>
+            <a href="#catalog">Украшения</a>
+            <a href="contacts.html">Контакты</a>
         </nav>
     </header>
 
     <!-- Главный экран (Hero) -->
-    <section class="hero">
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwzXgr45gpyOCeyGPh9VvVgJeF8SssGs3krJRO-er_A&s=10') center/cover no-repeat;">
         <div class="hero-content">
             <h1>Искусство ювелиров</h1>
-            <p>Эксклюбийные украшения с характером и традициями</p>
-            <a href="#" class="btn">Смотреть каталог</a>
+            <p>Эксклюзивные украшения с характером и традициями</p>
+            <a href="#catalog" class="btn">Смотреть каталог</a>
         </div>
     </section>
-<section class="categories">
+
+    <!-- Блок категорий / коллекций -->
+    <section class="categories">
         <h2 class="section-title">Наши коллекции</h2>
-        
         <div class="categories-grid">
-            <!-- Карточка 1 -->
-            <div class="category-card" style="background-image: url('https://unsplash.com');">
+            <div class="category-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ78hq5LMti6_wLG7sCom3WOmFaFnB5WDvR2pDWA-hxyA&s=10');">
                 <div class="category-overlay">
                     <h3>Кольца</h3>
-                    <a href="#" class="category-link">Смотреть</a>
+                    <a href="#catalog" class="category-link">Смотреть</a>
                 </div>
             </div>
-
-            <!-- Карточка 2 -->
-            <div class="category-card" style="background-image: url('https://unsplash.com');">
+            <div class="category-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCZka5EnydsZkvO7mHW3LczYY6uK6Xw6TaNwmXhFFCQ&s=10');">
                 <div class="category-overlay">
                     <h3>Серьги</h3>
-                    <a href="#" class="category-link">Смотреть</a>
+                    <a href="#catalog" class="category-link">Смотреть</a>
                 </div>
             </div>
-
-            <!-- Карточка 3 -->
-            <div class="category-card" style="background-image: url('https://unsplash.com');">
+            <div class="category-card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWOhZ7uS9zwp7JFq-Bmg1Yl2X7rslXHOEoOHtSirJhUg&s=10');">
                 <div class="category-overlay">
                     <h3>Ожерелья</h3>
-                    <a href="#" class="category-link">Смотреть</a>
+                    <a href="#catalog" class="category-link">Смотреть</a>
                 </div>
             </div>
         </div>
     </section>
-        <!-- Блок товаров / Витрина -->
-    <section class="products">
+
+    <!-- Блок товаров / Витрина -->
+    <section class="products" id="catalog">
         <h2 class="section-title">Популярные украшения</h2>
-        
         <div class="products-grid">
             <!-- Товар 1 -->
             <div class="product-card">
-                <div class="product-image" style="background-image: url('https://unsplash.com');"></div>
+                <div class="product-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeY6erZnUtKr-U5tpqOsePOSU12xNAdCwGzst7bcnigg&s=10');"></div>
                 <div class="product-info">
                     <h3 class="product-name">Золотое кольцо с бриллиантом</h3>
                     <p class="product-price">1 250 ₾</p>
-                    <button class="add-to-cart">В корзину</button>
+                    <a href="./product.html" class="add-to-cart" style="display: block; text-align: center; text-decoration: none; line-height: 40px;">Подробнее</a>
                 </div>
             </div>
-
             <!-- Товар 2 -->
             <div class="product-card">
-                <div class="product-image" style="background-image: url('https://unsplash.com');"></div>
+                <div class="product-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTstkNWa37BomdBMr4WM845r1y2zG_-ly93atkcSrlJtg&s=10');"></div>
                 <div class="product-info">
                     <h3 class="product-name">Серьги из белого золота</h3>
                     <p class="product-price">980 ₾</p>
-                    <button class="add-to-cart">В корзину</button>
+                    <a href="./earrings.html" class="add-to-cart" style="display: block; text-align: center; text-decoration: none; line-height: 40px;">Подробнее</a>
                 </div>
             </div>
-
             <!-- Товар 3 -->
             <div class="product-card">
-                <div class="product-image" style="background-image: url('https://unsplash.com');"></div>
+                <div class="product-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROb6Q01sNCmbMwSAJ6jv1AOQKi0a0JuuYIOZ_7DCKg1g&s=10');"></div>
                 <div class="product-info">
                     <h3 class="product-name">Подвеска с изумрудом</h3>
                     <p class="product-price">1 500 ₾</p>
-                    <button class="add-to-cart">В корзину</button>
+                    <a href="./pendant.html" class="add-to-cart" style="display: block; text-align: center; text-decoration: none; line-height: 40px;">Подробнее</a>
                 </div>
             </div>
-
             <!-- Товар 4 -->
             <div class="product-card">
-                <div class="product-image" style="background-image: url('https://unsplash.com');"></div>
+                <div class="product-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKAECVw9bIIueMIcaj72eTv57NSyAzaQDAGyPNijRPWw&s=10');"></div>
                 <div class="product-info">
                     <h3 class="product-name">Браслет классический</h3>
                     <p class="product-price">750 ₾</p>
-                    <button class="add-to-cart">В корзину</button>
+                    <a href="./bracelet.html" class="add-to-cart" style="display: block; text-align: center; text-decoration: none; line-height: 40px;">Подробнее</a>
                 </div>
             </div>
         </div>
     </section>
-<footer class="footer">
+
+    <!-- Подвал сайта (Footer) -->
+    <footer class="footer">
         <div class="footer-container">
-            <!-- Блок 1: О компании -->
             <div class="footer-brand">
                 <div class="footer-logo">VIKI</div>
                 <p>Ювелирный дом с глубокими традициями и уникальным кавказским характером. Создаем историю в каждом украшении.</p>
             </div>
-
-            <!-- Блок 2: Покупателям -->
             <div class="footer-links">
                 <h4>Покупателям</h4>
                 <ul>
@@ -120,22 +111,19 @@
                     <li><a href="#">Уход за украшениями</a></li>
                 </ul>
             </div>
-
-            <!-- Блок 3: Контакты -->
             <div class="footer-contacts">
                 <h4>Контакты</h4>
                 <ul>
                     <li>📍 Тбилиси, проспект Руставели, 19</li>
                     <li>📞 +995 32 2XX XX XX</li>
-                    <li>✉️ info@zarapkhana.ge</li>
+                    <li>✉️ info@viki-jewelry.ge</li>
                 </ul>
             </div>
         </div>
-
-        <!-- Нижняя плашка с копирайтом -->
         <div class="footer-bottom">
-            <p>&copy; VIKI. Все права защищены. Разработано с любовью.</p>
+            <p>&copy; 2026 VIKI. Все права защищены. Разработано с любовью.</p>
         </div>
     </footer>
+
 </body>
 </html>

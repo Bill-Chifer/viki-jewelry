@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Браслет классический — VIKI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">VIKI</a></div>
+        <nav class="nav"><a href="index.html">Главная</a><a href="index.html#catalog">Коллекции</a><a href="contacts.html">Контакты</a></nav>
+    </header>
+    <main class="product-page-container">
+        <div class="product-gallery">
+            <div class="main-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZHLR-cSVqqORBLlZ_jEh9bnQmw-DJ6-GINNlrQW-xBg&s=10');"></div>
+        </div>
+        <div class="product-details">
+            <span class="product-category">Браслеты</span>
+            <h1 class="product-title">Браслет классический плетеный</h1>
+            <p class="product-page-price">750 ₾</p>
+                        <!-- Селектор размеров -->
+            <div class="size-selector">
+                <label>Выберите размер браслета:</label>
+                <div class="size-options">
+                    <button class="size-btn">16 см</button>
+                    <button class="size-btn">17 см</button>
+                    <button class="size-btn active">18 см</button>
+                    <button class="size-btn">19 см</button>
+                </div>
+            </div>
+
+            <button class="buy-now-btn">Добавить в корзину</button>
+            <div class="product-description-block">
+                <h3>Описание</h3>
+                <p>Элегантный золотой браслет прочного и утонченного плетения. Прекрасно смотрится как самостоятельное украшение, так и в сочетании с часами.</p>
+            </div>
+            <div class="info-accordion">
+                <div class="accordion-item">
+                    <h4>Характеристики изделия</h4>
+                    <p>Металл: Красное золото 585 пробы<br>Длина: 18 см<br>Вес изделия: ~4.20 г</p>
+                </div>
+            </div>
+        </div>
+    </main>
+        <script>
+        const sizeButtons = document.querySelectorAll('.size-btn');
+        let selectedSize = '18 см';
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                sizeButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                selectedSize = button.textContent;
+            });
+        });
+
+        document.querySelector('.buy-now-btn').addEventListener('click', () => {
+            alert(`Браслет бренда VIKI (размер: ${selectedSize}) успешно добавлен в корзину!`);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — VIKI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">VIKI</a></div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="index.html#catalog">Коллекции</a>
+            <a href="#">О бренде</a>
+            <a href="contacts.html" class="active-link" style="color: #bfa15f;">Контакты</a>
+        </nav>
+    </header>
+
+    <!-- Основной контент страницы контактов -->
+    <main class="contacts-container">
+        <h1 class="page-title">Связаться с нами</h1>
+        
+        <div class="contacts-content">
+            <!-- Левая колонка: Информация -->
+            <div class="contacts-info">
+                <div class="info-block">
+                    <h3>Флагманский бутик</h3>
+                    <p>📍 Тбилиси, проспект Руставели, 19</p>
+                    <p>⏱ Ежедневно с 10:00 до 21:00</p>
+                </div>
+                
+                <div class="info-block">
+                    <h3>Клиентская поддержка</h3>
+                    <p>📞 +995 32 2XX XX XX</p>
+                    <p>✉️ info@viki-jewelry.ge</p>
+                </div>
+            </div>
+
+            <!-- Правая колонка: Форма обратной связи -->
+            <div class="contacts-form-container">
+                <h3>Напишите нам</h3>
+                <form class="contacts-form" onsubmit="event.preventDefault(); alert('Ваше сообщение успешно отправлено! Менеджер VIKI свяжется с вами.');">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

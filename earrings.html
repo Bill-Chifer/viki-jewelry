@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Серьги из белого золота — VIKI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">VIKI</a></div>
+        <nav class="nav"><a href="index.html">Главная</a><a href="index.html#catalog">Коллекции</a><a href="contacts.html">Контакты</a></nav>
+    </header>
+    <main class="product-page-container">
+        <div class="product-gallery">
+            <div class="main-image" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJiUZaziIyLU9X7FA0hLTZ8DH4PBjoq0DaOPFqZ5zK2g&s=10');"></div>
+        </div>
+        <div class="product-details">
+            <span class="product-category">Изысканные серьги</span>
+            <h1 class="product-title">Серьги из белого золота «Сияние»</h1>
+            <p class="product-page-price">980 ₾</p>
+                        <!-- Селектор размеров -->
+            <div class="size-selector">
+                <label>Выберите диаметр / размер:</label>
+                <div class="size-options">
+                    <button class="size-btn">12 мм</button>
+                    <button class="size-btn active">15 мм</button>
+                    <button class="size-btn">18 мм</button>
+                </div>
+            </div>
+
+            <button class="buy-now-btn">Добавить в корзину</button>
+            <div class="product-description-block">
+                <h3>Описание</h3>
+                <p>Классические серьги из белого золота премиальной пробы. Благородный холодный блеск металла выгодно подчеркивает вечерний или деловой образ.</p>
+            </div>
+            <div class="info-accordion">
+                <div class="accordion-item">
+                    <h4>Характеристики изделия</h4>
+                    <p>Металл: Белое золото 585 пробы<br>Вес изделия: ~3.10 г<br>Замок: Английский классический</p>
+                </div>
+            </div>
+        </div>
+    </main>
+<script>
+        const sizeButtons = document.querySelectorAll('.size-btn');
+        let selectedSize = '15 мм'; // По умолчанию
+
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                sizeButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                selectedSize = button.textContent;
+            });
+        });
+
+        document.querySelector('.buy-now-btn').addEventListener('click', () => {
+            alert(`Серьги бренда VIKI (размер: ${selectedSize}) успешно добавлены в корзину!`);
+        });
+    </script>
+</body>
+</html>
